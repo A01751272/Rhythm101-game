@@ -14,7 +14,7 @@ using UnityEngine.Networking;
 public class MovimientoCirculos : MonoBehaviour
 {
 
-    public int velocidadCirculos = 0;
+    public float velocidadCirculos = 0;
     public int[] VectorCirculos = { 0, 1, 2, 3, 0, 1, 3, 0, 1, 2, 1, 3, 0, 1, 3, 0, 2, 1, 2, 0, 3 };
 
     private bool IniciarCorrutina = false;
