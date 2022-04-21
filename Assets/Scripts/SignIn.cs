@@ -14,7 +14,6 @@ public class SignIn : MonoBehaviour
     public TMP_InputField InputFieldPassword;
 
     private string URLValidarJugador;
-    private string URLRegistroJugador;
     public string idPlayerForm;
     public SignIn Instance;
     void Awake()
@@ -29,7 +28,12 @@ public class SignIn : MonoBehaviour
 
     private IEnumerator InsertNewPlayer()
     {
-        if (InputFieldName.text == "" || InputFieldBirthday.text == "" || InputFieldCountry.text == "" || InputFieldCity.text == "" || InputFieldUsername.text == "" || InputFieldPassword.text == "")
+        if (InputFieldName.text == "" || 
+            InputFieldBirthday.text == "" ||
+            InputFieldCountry.text == "" ||
+            InputFieldCity.text == "" ||
+            InputFieldUsername.text == "" ||
+            InputFieldPassword.text == "")
         {
             Debug.Log("Please fill al inputs before signing in");
         }
@@ -37,7 +41,7 @@ public class SignIn : MonoBehaviour
         {
             string username = InputFieldUsername.text;
 
-            URLValidarJugador = "http://localhost:3000/players/" + username;
+            URLValidarJugador = "https://rhythm101-oxy65.ondigitalocean.app/players/" + username;
             UnityWebRequest request = UnityWebRequest.Get(URLValidarJugador);
             yield return request.SendWebRequest();
             if (request.result == UnityWebRequest.Result.Success)
