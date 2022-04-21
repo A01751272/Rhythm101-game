@@ -34,7 +34,7 @@ public class MovimientoCirculos : MonoBehaviour
         foreach (int i in VectorCirculos)
         {
             gameObject.transform.GetChild(i).gameObject.SetActive(true);
-            yield return new WaitForSeconds(0.5f);
+            yield return new WaitForSeconds(velocidadCirculos);
         }
         yield return new WaitForSeconds(2);
         TerminarNivel();

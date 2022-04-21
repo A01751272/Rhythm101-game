@@ -135,14 +135,6 @@ PrefabInstance:
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6785038025482768911, guid: fc2fd25d50754194eb70ce81c134df6b, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1.3090208
-      objectReference: {fileID: 0}
-    - target: {fileID: 6785038025482768911, guid: fc2fd25d50754194eb70ce81c134df6b, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1.2790526
-      objectReference: {fileID: 0}
-    - target: {fileID: 6785038025482768911, guid: fc2fd25d50754194eb70ce81c134df6b, type: 3}
       propertyPath: m_LocalPosition.x
       value: 1.6938
       objectReference: {fileID: 0}
@@ -185,10 +177,6 @@ PrefabInstance:
     - target: {fileID: 7937865366740823871, guid: fc2fd25d50754194eb70ce81c134df6b, type: 3}
       propertyPath: m_Name
       value: FloorTom
-      objectReference: {fileID: 0}
-    - target: {fileID: 7937865366740823871, guid: fc2fd25d50754194eb70ce81c134df6b, type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fc2fd25d50754194eb70ce81c134df6b, type: 3}
@@ -608,7 +596,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 505173c6fe8b8f549963e4852b3317e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velocidadCirculos: 0
+  velocidadCirculos: 2
   VectorCirculos: 000000000100000002000000030000000000000001000000030000000000000001000000020000000100000003000000000000000100000003000000000000000200000001000000020000000000000003000000
   CanvasFinalNivel: {fileID: 2120536328}
 --- !u!4 &256314483
@@ -2791,21 +2779,9 @@ PrefabInstance:
       propertyPath: m_Name
       value: HiHats
       objectReference: {fileID: 0}
-    - target: {fileID: 763913329315349484, guid: d228a7cc5236e7b4bb5809a8d0b66822, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 5768178271446197763, guid: d228a7cc5236e7b4bb5809a8d0b66822, type: 3}
       propertyPath: m_RootOrder
       value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5768178271446197763, guid: d228a7cc5236e7b4bb5809a8d0b66822, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1.312522
-      objectReference: {fileID: 0}
-    - target: {fileID: 5768178271446197763, guid: d228a7cc5236e7b4bb5809a8d0b66822, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1.3125216
       objectReference: {fileID: 0}
     - target: {fileID: 5768178271446197763, guid: d228a7cc5236e7b4bb5809a8d0b66822, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2865,21 +2841,9 @@ PrefabInstance:
       propertyPath: m_Name
       value: RightCrashCymbal
       objectReference: {fileID: 0}
-    - target: {fileID: 4902241096343203950, guid: 0b0596dc6d8f4454c8a27ba64a13f1be, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 6458113120110468342, guid: 0b0596dc6d8f4454c8a27ba64a13f1be, type: 3}
       propertyPath: m_RootOrder
       value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6458113120110468342, guid: 0b0596dc6d8f4454c8a27ba64a13f1be, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1.3083718
-      objectReference: {fileID: 0}
-    - target: {fileID: 6458113120110468342, guid: 0b0596dc6d8f4454c8a27ba64a13f1be, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1.2957034
       objectReference: {fileID: 0}
     - target: {fileID: 6458113120110468342, guid: 0b0596dc6d8f4454c8a27ba64a13f1be, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3841,10 +3805,6 @@ PrefabInstance:
     - target: {fileID: 7470790728677838818, guid: d8ec19caada2528498d67c971b4f99fb, type: 3}
       propertyPath: m_Name
       value: Circle1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7470790728677838818, guid: d8ec19caada2528498d67c971b4f99fb, type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7470790728677838844, guid: d8ec19caada2528498d67c971b4f99fb, type: 3}
       propertyPath: m_RootOrder
@@ -5538,14 +5498,6 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2374180005229494123, guid: f99a0d5b27c3cdb43b5d1e7b4b051338, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1.320291
-      objectReference: {fileID: 0}
-    - target: {fileID: 2374180005229494123, guid: f99a0d5b27c3cdb43b5d1e7b4b051338, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1.3202914
-      objectReference: {fileID: 0}
-    - target: {fileID: 2374180005229494123, guid: f99a0d5b27c3cdb43b5d1e7b4b051338, type: 3}
       propertyPath: m_LocalPosition.x
       value: -2.8811
       objectReference: {fileID: 0}
@@ -5585,21 +5537,9 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2830847039581864984, guid: f99a0d5b27c3cdb43b5d1e7b4b051338, type: 3}
-      propertyPath: m_Radius
-      value: 0.55
-      objectReference: {fileID: 0}
-    - target: {fileID: 2830847039581864984, guid: f99a0d5b27c3cdb43b5d1e7b4b051338, type: 3}
-      propertyPath: m_Offset.x
-      value: -1
-      objectReference: {fileID: 0}
     - target: {fileID: 4196100123729862477, guid: f99a0d5b27c3cdb43b5d1e7b4b051338, type: 3}
       propertyPath: m_Name
       value: SnareDrum
-      objectReference: {fileID: 0}
-    - target: {fileID: 4196100123729862477, guid: f99a0d5b27c3cdb43b5d1e7b4b051338, type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f99a0d5b27c3cdb43b5d1e7b4b051338, type: 3}
