@@ -13,6 +13,8 @@ using UnityEngine.Networking;
 
 public class MovimientoCirculos : MonoBehaviour
 {
+
+    public int velocidadCirculos = 0;
     public int[] VectorCirculos = { 0, 1, 2, 3, 0, 1, 3, 0, 1, 2, 1, 3, 0, 1, 3, 0, 2, 1, 2, 0, 3 };
 
     private bool IniciarCorrutina = false;
@@ -32,7 +34,7 @@ public class MovimientoCirculos : MonoBehaviour
         foreach (int i in VectorCirculos)
         {
             gameObject.transform.GetChild(i).gameObject.SetActive(true);
-            yield return new WaitForSeconds(1);
+            yield return new WaitForSeconds(0.5f);
         }
         yield return new WaitForSeconds(2);
         TerminarNivel();
