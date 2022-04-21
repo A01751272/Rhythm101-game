@@ -53,7 +53,7 @@ public class Forms : MonoBehaviour
         Forma.AddField("opinion", opinion);
         Forma.AddField("player", player);
 
-        UnityWebRequest postrequest = UnityWebRequest.Post("http://localhost:3000/evaluations/", Forma);
+        UnityWebRequest postrequest = UnityWebRequest.Post("https://rhythm101-oxy65.ondigitalocean.app/evaluations/", Forma);
         yield return postrequest.SendWebRequest();
         if (postrequest.result == UnityWebRequest.Result.Success)
         {
@@ -91,7 +91,7 @@ public class Forms : MonoBehaviour
         Forma.AddField("opinion", opinion);
         Forma.AddField("player", player);
 
-        UnityWebRequest postrequest = UnityWebRequest.Post("http://localhost:3000/evaluations/", Forma);
+        UnityWebRequest postrequest = UnityWebRequest.Post("https://rhythm101-oxy65.ondigitalocean.app/evaluations/", Forma);
         yield return postrequest.SendWebRequest();
         if (postrequest.result == UnityWebRequest.Result.Success)
         {
