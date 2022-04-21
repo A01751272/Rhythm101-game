@@ -1,0 +1,73 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using TMPro;
+//Clase para generar los cuadros de dialogo en el juego
+public class Dialogue : MonoBehaviour
+{
+    //Atributos de clase
+    public TextMeshProUGUI textComponent; //Texto al que se vinvulara
+    public string[] lines; //Lineas de texto a mostrar
+    public float textSpeed; //Tiempo de pausa entre letra y letra
+    private int index;
+
+    // Start is called before the first frame update
+    void Start()
+    {
+        //Vaciamos el texto e iniciamos a mostrar dialogo
+        textComponent.text = string.Empty;
+        StartCoroutine(StartDialogue());
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        //Revisar si se presiona el click del mouse o enter para adelantar o saltar al sigueinte dialogo
+        if (Input.GetMouseButtonDown(0) || Input.GetKeyDown(KeyCode.Return))
+        {
+            if (textComponent.text == lines[index])
+            {
+                NextLine();
+            }
+            else
+            {
+                StopAllCoroutines();
+                textComponent.text = lines[index];
+            }
+        }
+    }
+
+    IEnumerator StartDialogue()
+    {
+        //Iniciamos a mostrar el dialogo
+        yield return new WaitForSeconds(2);
+        index = 0;
+        StartCoroutine(TypeLine());
+    }
+
+    IEnumerator TypeLine()
+    {
+        //Ir escribiendo letra por letra de una linea con la pausa corresponsiente
+        foreach(char c in lines[index].ToCharArray())
+        {
+            textComponent.text += c;
+            yield return new WaitForSeconds(textSpeed);
+        }
+    }
+
+    void NextLine()
+    {
+        //Revisamos si quedan lineas por mostrar, si si actualizamos la linea actual y la mostramos
+        //Si no, dejamos de mostrar la caja de texto
+        if (index < lines.Length - 1)
+        {
+            index++;
+            textComponent.text = string.Empty;
+            StartCoroutine(TypeLine());
+        }
+        else
+        {
+            gameObject.SetActive(false);
+        }
+    }
+}
