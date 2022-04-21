@@ -1284,7 +1284,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Question 1
+  m_text: Opinion 2
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5cefb49045d79a447bd168cf84dca9a1, type: 2}
   m_sharedMaterial: {fileID: -1087031883453582729, guid: 5cefb49045d79a447bd168cf84dca9a1, type: 2}
@@ -1804,7 +1804,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Question 1
+  m_text: Ability 4
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5cefb49045d79a447bd168cf84dca9a1, type: 2}
   m_sharedMaterial: {fileID: -1087031883453582729, guid: 5cefb49045d79a447bd168cf84dca9a1, type: 2}
@@ -1992,7 +1992,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Question 1
+  m_text: Ability 1
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5cefb49045d79a447bd168cf84dca9a1, type: 2}
   m_sharedMaterial: {fileID: -1087031883453582729, guid: 5cefb49045d79a447bd168cf84dca9a1, type: 2}
@@ -2127,7 +2127,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Question 1
+  m_text: Opinion 3
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5cefb49045d79a447bd168cf84dca9a1, type: 2}
   m_sharedMaterial: {fileID: -1087031883453582729, guid: 5cefb49045d79a447bd168cf84dca9a1, type: 2}
@@ -2262,7 +2262,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Question 1
+  m_text: Ability 2
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5cefb49045d79a447bd168cf84dca9a1, type: 2}
   m_sharedMaterial: {fileID: -1087031883453582729, guid: 5cefb49045d79a447bd168cf84dca9a1, type: 2}
@@ -2487,6 +2487,7 @@ GameObject:
   - component: {fileID: 811390522}
   - component: {fileID: 811390521}
   - component: {fileID: 811390525}
+  - component: {fileID: 811390526}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -2594,6 +2595,26 @@ MonoBehaviour:
   HUDPause: {fileID: 0}
   TutorialPanel1: {fileID: 0}
   TutorialPanel2: {fileID: 0}
+--- !u!114 &811390526
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 811390520}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5458f82c2a078bd4e80f0ac2676f8216, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  InputFieldAnswer1: {fileID: 1870851387}
+  InputFieldAnswer2: {fileID: 1692099660}
+  InputFieldAnswer3: {fileID: 337556095}
+  InputFieldAnswer4: {fileID: 1615451531}
+  InputFieldAnswer5: {fileID: 443437028}
+  InputFieldAnswer6: {fileID: 1927772641}
+  InputFieldAnswer7: {fileID: 1451604739}
+  InputFieldAnswer8: {fileID: 366014244}
 --- !u!1 &837343672
 GameObject:
   m_ObjectHideFlags: 0
@@ -2945,7 +2966,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Question 1
+  m_text: Opinion 1
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5cefb49045d79a447bd168cf84dca9a1, type: 2}
   m_sharedMaterial: {fileID: -1087031883453582729, guid: 5cefb49045d79a447bd168cf84dca9a1, type: 2}
@@ -3241,9 +3262,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 811390525}
-        m_TargetAssemblyTypeName: Navegacion, Assembly-CSharp
-        m_MethodName: ToLogin
+      - m_Target: {fileID: 811390526}
+        m_TargetAssemblyTypeName: Forms, Assembly-CSharp
+        m_MethodName: InsertarDatosFormInicial
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4335,7 +4356,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Question 1
+  m_text: Opinion 4
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5cefb49045d79a447bd168cf84dca9a1, type: 2}
   m_sharedMaterial: {fileID: -1087031883453582729, guid: 5cefb49045d79a447bd168cf84dca9a1, type: 2}
@@ -4713,7 +4734,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Question 1
+  m_text: Ability 3
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5cefb49045d79a447bd168cf84dca9a1, type: 2}
   m_sharedMaterial: {fileID: -1087031883453582729, guid: 5cefb49045d79a447bd168cf84dca9a1, type: 2}
