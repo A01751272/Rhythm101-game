@@ -40,6 +40,8 @@ public class Login : MonoBehaviour
             if (request.result == UnityWebRequest.Result.Success)
             {
                 idPlayer = request.downloadHandler.text;
+                PlayerPrefs.SetString("idPlayer", idPlayer);
+                PlayerPrefs.Save();
                 Debug.Log("Los datos ingresados son correctos");
                 Debug.Log(idPlayer);
                 Navegacion.Instance.ToLevelMenu();
