@@ -101,7 +101,7 @@ public class Navegacion : MonoBehaviour
         Forma.AddField("EndTime", EndTime);
         Forma.AddField("player", player);
 
-        UnityWebRequest postrequest = UnityWebRequest.Post("http://localhost:3000/attempts/", Forma);
+        UnityWebRequest postrequest = UnityWebRequest.Post("https://rhythm101-oxy65.ondigitalocean.app/attempts/", Forma);
         yield return postrequest.SendWebRequest();
         if (postrequest.result == UnityWebRequest.Result.Success)
         {
