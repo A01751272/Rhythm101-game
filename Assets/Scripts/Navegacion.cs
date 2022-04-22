@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Networking;
 using UnityEngine.SceneManagement;
 
 public class Navegacion : MonoBehaviour
@@ -18,6 +19,11 @@ public class Navegacion : MonoBehaviour
     private bool Panel1On = true;
     private bool Panel2On = false;
     private bool isPaused = false;
+    private string score;
+    private string level;
+    private string BeginTime;
+    private string EndTime;
+    private string player;
 
     public static Navegacion Instance;
 
@@ -67,8 +73,47 @@ public class Navegacion : MonoBehaviour
     }
     public void ToInterlude2()
     {
-        SceneManager.LoadScene("SecondInterlude");
+        Debug.Log("Datos recibidos antes de navegar al Interlude 2");
+        Debug.Log(AdministradorNivel.instancia.PuntajeActual);
+        Debug.Log(AdministradorNivel.instancia.HoraInicio);
+        Debug.Log(AdministradorNivel.instancia.HoraFinal);
+        InsertarAttemptNivelUno();
+        //SceneManager.LoadScene("SecondInterlude");
     }
+
+    public void InsertarAttemptNivelUno()
+    {
+        level = "1";
+        StartCoroutine(InsertAttempt(level));
+    }
+
+    private IEnumerator InsertAttempt(string level)
+    {
+        score = (AdministradorNivel.instancia.PuntajeActual).ToString();
+        BeginTime = AdministradorNivel.instancia.HoraInicio;
+        EndTime = AdministradorNivel.instancia.HoraFinal;
+        player = PlayerPrefs.GetString("idPlayer", "0");
+
+        WWWForm Forma = new WWWForm();
+        Forma.AddField("score", score);
+        Forma.AddField("level", level);
+        Forma.AddField("BeginTime", BeginTime);
+        Forma.AddField("EndTime", EndTime);
+        Forma.AddField("player", player);
+
+        UnityWebRequest postrequest = UnityWebRequest.Post("http://localhost:3000/attempts/", Forma);
+        yield return postrequest.SendWebRequest();
+        if (postrequest.result == UnityWebRequest.Result.Success)
+        {
+            string respuestaServidor = postrequest.downloadHandler.text;
+            Debug.Log(respuestaServidor);
+        }
+        else
+        {
+            Debug.Log("Error al registrar attempt");
+        }
+    }
+
     public void ToInterlude3()
     {
         SceneManager.LoadScene("ThirdInterlude");

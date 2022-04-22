@@ -12,6 +12,7 @@ public class Login : MonoBehaviour
     private string URLInicioSesion;
     public string idPlayer;
     public Login Instance;
+    private string playerId;
 
     void Awake()
     {
@@ -43,7 +44,8 @@ public class Login : MonoBehaviour
                 PlayerPrefs.SetString("idPlayer", idPlayer);
                 PlayerPrefs.Save();
                 Debug.Log("Los datos ingresados son correctos");
-                Debug.Log(idPlayer);
+                playerId = PlayerPrefs.GetString("idPlayer", "0");
+                Debug.Log("IdPlayer: " + playerId);
                 Navegacion.Instance.ToLevelMenu();
             }
             else

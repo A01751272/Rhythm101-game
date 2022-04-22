@@ -23,6 +23,8 @@ public class AdministradorNivel : MonoBehaviour
     public TextMeshProUGUI TextoFinalNivel;
 
     public bool ComenzarNivel = false;
+    public string HoraInicio;
+    public string HoraFinal;
 
     public GameObject CanvasInicioNivel;
     public GameObject CanvasInfoNivel;
@@ -31,6 +33,7 @@ public class AdministradorNivel : MonoBehaviour
     void Start()
     {
         instancia = this;
+        PuntajeActual = 0;
         CanvasInicioNivel.SetActive(true);
         CanvasInfoNivel.SetActive(false);
     }
@@ -42,6 +45,7 @@ public class AdministradorNivel : MonoBehaviour
             if (Input.anyKeyDown)
             {
                 empezarNivel();
+                HoraInicio = System.DateTime.Now.ToString("HH:mm:ss");
             }
         }
     }
@@ -54,9 +58,14 @@ public class AdministradorNivel : MonoBehaviour
         CanvasInfoNivel.SetActive(true);
     }
 
+    public void TerminarNivel()
+    {
+        HoraFinal = System.DateTime.Now.ToString("HH:mm:ss");
+    }   
+
     public void NotaExitosa()
     {
-        Debug.Log("¡Nota exitosa!");
+        //Debug.Log("¡Nota exitosa!");
         PuntajeActual += PuntajeGolpeExitoso * MultiplicadorActual;
         TextoPuntajeActual.text = "Score: " + PuntajeActual;
 
@@ -73,7 +82,7 @@ public class AdministradorNivel : MonoBehaviour
 
     public void NotaFallida()
     {
-        Debug.Log("¡Fallaste!");
+        //Debug.Log("¡Fallaste!");
         ContadorMultiplicador = 0;
         MultiplicadorActual = 1;
         TextoMultiplicadorActual.text = "Multiplier: x" + MultiplicadorActual;

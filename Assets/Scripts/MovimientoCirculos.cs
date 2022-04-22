@@ -33,8 +33,13 @@ public class MovimientoCirculos : MonoBehaviour
     {
         foreach (int i in VectorCirculos)
         {
-            gameObject.transform.GetChild(i).gameObject.SetActive(true);
-            yield return new WaitForSeconds(velocidadCirculos);
+            if (i == 4)
+            {
+                yield return new WaitForSeconds(velocidadCirculos);
+            } else {
+                gameObject.transform.GetChild(i).gameObject.SetActive(true);
+                yield return new WaitForSeconds(velocidadCirculos);
+            }
         }
         yield return new WaitForSeconds(2);
         TerminarNivel();
@@ -48,6 +53,7 @@ public class MovimientoCirculos : MonoBehaviour
         AdministradorNivel.instancia.TextoFinalNivel.text = "You finished the level! Congratulations! Your score was: " + AdministradorNivel.instancia.PuntajeActual;
         AdministradorNivel.instancia.BotonSiguienteEscena.SetActive(true);
         //StartCoroutine(PostScores("1", administrador.instance.PuntajeActual));
+        AdministradorNivel.instancia.TerminarNivel();
     }
 
     /*
