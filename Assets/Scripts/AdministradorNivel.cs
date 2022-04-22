@@ -26,6 +26,7 @@ public class AdministradorNivel : MonoBehaviour
 
     public GameObject CanvasInicioNivel;
     public GameObject CanvasInfoNivel;
+    public GameObject BotonSiguienteEscena;
 
     void Start()
     {
@@ -57,7 +58,7 @@ public class AdministradorNivel : MonoBehaviour
     {
         Debug.Log("¡Nota exitosa!");
         PuntajeActual += PuntajeGolpeExitoso * MultiplicadorActual;
-        TextoPuntajeActual.text = "Puntaje: " + PuntajeActual;
+        TextoPuntajeActual.text = "Score: " + PuntajeActual;
 
         ContadorMultiplicador++;
 
@@ -67,7 +68,7 @@ public class AdministradorNivel : MonoBehaviour
             ContadorMultiplicador = 0;
         }
         else { }
-        TextoMultiplicadorActual.text = "Multiplicador: x" + MultiplicadorActual;
+        TextoMultiplicadorActual.text = "Multiplier: x" + MultiplicadorActual;
     }
 
     public void NotaFallida()
@@ -75,6 +76,6 @@ public class AdministradorNivel : MonoBehaviour
         Debug.Log("¡Fallaste!");
         ContadorMultiplicador = 0;
         MultiplicadorActual = 1;
-        TextoMultiplicadorActual.text = "Multiplicador: x" + MultiplicadorActual;
+        TextoMultiplicadorActual.text = "Multiplier: x" + MultiplicadorActual;
     }
 }

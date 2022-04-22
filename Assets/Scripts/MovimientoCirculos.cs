@@ -46,6 +46,7 @@ public class MovimientoCirculos : MonoBehaviour
         AdministradorNivel.instancia.CanvasInfoNivel.SetActive(false);
         AdministradorNivel.instancia.CancionNivel.Stop();
         AdministradorNivel.instancia.TextoFinalNivel.text = "You finished the level! Congratulations! Your score was: " + AdministradorNivel.instancia.PuntajeActual;
+        AdministradorNivel.instancia.BotonSiguienteEscena.SetActive(true);
         //StartCoroutine(PostScores("1", administrador.instance.PuntajeActual));
     }
 
