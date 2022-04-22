@@ -2724,7 +2724,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1049782803}
         m_TargetAssemblyTypeName: Navegacion, Assembly-CSharp
-        m_MethodName: ToCredits
+        m_MethodName: ToFinalForm
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

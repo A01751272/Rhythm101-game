@@ -61,6 +61,11 @@ public class Navegacion : MonoBehaviour
     }
     public void ToFinalForm()
     {
+        Debug.Log("Datos recibidos antes de navegar al Final Form");
+        Debug.Log(AdministradorNivel.instancia.PuntajeActual);
+        Debug.Log(AdministradorNivel.instancia.HoraInicio);
+        Debug.Log(AdministradorNivel.instancia.HoraFinal);
+        InsertarAttemptNivelThree();
         SceneManager.LoadScene("FinalForm");
     }
     public void ToCredits()
@@ -78,12 +83,24 @@ public class Navegacion : MonoBehaviour
         Debug.Log(AdministradorNivel.instancia.HoraInicio);
         Debug.Log(AdministradorNivel.instancia.HoraFinal);
         InsertarAttemptNivelUno();
-        //SceneManager.LoadScene("SecondInterlude");
+        SceneManager.LoadScene("SecondInterlude");
     }
 
     public void InsertarAttemptNivelUno()
     {
         level = "1";
+        StartCoroutine(InsertAttempt(level));
+    }
+
+    public void InsertarAttemptNivelDos()
+    {
+        level = "2";
+        StartCoroutine(InsertAttempt(level));
+    }
+
+    public void InsertarAttemptNivelThree()
+    {
+        level = "3";
         StartCoroutine(InsertAttempt(level));
     }
 
@@ -116,6 +133,11 @@ public class Navegacion : MonoBehaviour
 
     public void ToInterlude3()
     {
+        Debug.Log("Datos recibidos antes de navegar al Interlude 3");
+        Debug.Log(AdministradorNivel.instancia.PuntajeActual);
+        Debug.Log(AdministradorNivel.instancia.HoraInicio);
+        Debug.Log(AdministradorNivel.instancia.HoraFinal);
+        InsertarAttemptNivelDos();
         SceneManager.LoadScene("ThirdInterlude");
     }
     public void ToLevel1()

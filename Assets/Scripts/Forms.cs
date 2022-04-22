@@ -21,6 +21,13 @@ public class Forms : MonoBehaviour
     private string opinion;
     private int player;
 
+    public static Forms instancia;
+
+    void Awake()
+    {
+        instancia = this;
+    }
+
     public void InsertarDatosFormInicial()
     {
         StartCoroutine(InsertFormInicial());
