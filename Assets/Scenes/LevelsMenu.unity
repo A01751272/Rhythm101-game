@@ -1592,7 +1592,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1025489102}
         m_TargetAssemblyTypeName: Navegacion, Assembly-CSharp
-        m_MethodName: ToInterlude3
+        m_MethodName: ToInterlude3LevelMenu
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3017,7 +3017,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1025489102}
         m_TargetAssemblyTypeName: Navegacion, Assembly-CSharp
-        m_MethodName: ToInterlude2
+        m_MethodName: ToInterlude2LevelMenu
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

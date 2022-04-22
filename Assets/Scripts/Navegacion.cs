@@ -86,6 +86,11 @@ public class Navegacion : MonoBehaviour
         SceneManager.LoadScene("SecondInterlude");
     }
 
+    public void ToInterlude2LevelMenu()
+    {
+        SceneManager.LoadScene("SecondInterlude");
+    }
+
     public void InsertarAttemptNivelUno()
     {
         level = "1";
@@ -138,6 +143,11 @@ public class Navegacion : MonoBehaviour
         Debug.Log(AdministradorNivel.instancia.HoraInicio);
         Debug.Log(AdministradorNivel.instancia.HoraFinal);
         InsertarAttemptNivelDos();
+        SceneManager.LoadScene("ThirdInterlude");
+    }
+
+    public void ToInterlude3LevelMenu()
+    {
         SceneManager.LoadScene("ThirdInterlude");
     }
     public void ToLevel1()

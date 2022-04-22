@@ -19,7 +19,7 @@ public class Forms : MonoBehaviour
     private int formnumber2 = 2;
     private string ability;
     private string opinion;
-    private int player;
+    private string player;
 
     public static Forms instancia;
 
@@ -52,7 +52,7 @@ public class Forms : MonoBehaviour
         opinion = ((opinion1 + opinion2 + opinion3 + opinion4) / 4).ToString();
         ability = ((ability1 + ability2 + ability3 + ability4) / 4).ToString();
 
-        player = 1; //GetCurrentIdPlayer
+        player = PlayerPrefs.GetString("idPlayer", "0"); //GetCurrentIdPlayer
 
         WWWForm Forma = new WWWForm();
         Forma.AddField("number", formnumber1);
@@ -90,7 +90,7 @@ public class Forms : MonoBehaviour
         opinion = ((opinion1 + opinion2 + opinion3 + opinion4) / 4).ToString();
         ability = ((ability1 + ability2 + ability3 + ability4) / 4).ToString();
 
-        player = 1; //CurrentIdPlayer
+        player = PlayerPrefs.GetString("idPlayer", "0"); //CurrentIdPlayer
 
         WWWForm Forma = new WWWForm();
         Forma.AddField("number", formnumber2);
