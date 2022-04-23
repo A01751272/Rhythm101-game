@@ -135,7 +135,7 @@ GameObject:
   - component: {fileID: 260866312}
   - component: {fileID: 260866311}
   m_Layer: 5
-  m_Name: Text (TMP) (2)
+  m_Name: scoreplayer1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -270,7 +270,7 @@ GameObject:
   - component: {fileID: 275099437}
   - component: {fileID: 275099436}
   m_Layer: 5
-  m_Name: Text (TMP) (1)
+  m_Name: userplayer1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -489,7 +489,7 @@ GameObject:
   - component: {fileID: 443879751}
   - component: {fileID: 443879750}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: rankplayer1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -836,6 +836,7 @@ GameObject:
   - component: {fileID: 791208744}
   - component: {fileID: 791208743}
   - component: {fileID: 791208747}
+  - component: {fileID: 791208748}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -943,6 +944,18 @@ MonoBehaviour:
   HUDPause: {fileID: 0}
   TutorialPanel1: {fileID: 0}
   TutorialPanel2: {fileID: 0}
+--- !u!114 &791208748
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 791208742}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 80b25dd29d846fe458e19edb664a67d2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1140232126
 GameObject:
   m_ObjectHideFlags: 0
