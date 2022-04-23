@@ -69,7 +69,7 @@ public class Login : MonoBehaviour
 
                     if (resNivel.MaxLevel == "")
                     {
-                        PlayerPrefs.SetString("idLevel", "1");
+                        PlayerPrefs.SetString("idLevel", "0");
                         PlayerPrefs.Save();
                         playerprefId = PlayerPrefs.GetString("idLevel");
                         Debug.Log("El nivel máximo es: " + playerprefId);

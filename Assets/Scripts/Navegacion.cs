@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -83,12 +84,16 @@ public class Navegacion : MonoBehaviour
         Debug.Log(AdministradorNivel.instancia.HoraInicio);
         Debug.Log(AdministradorNivel.instancia.HoraFinal);
         InsertarAttemptNivelUno();
+        PlayerPrefs.SetString("idLevel", "1");
         SceneManager.LoadScene("SecondInterlude");
     }
 
     public void ToInterlude2LevelMenu()
     {
-        SceneManager.LoadScene("SecondInterlude");
+        if(Int32.Parse(PlayerPrefs.GetString("idLevel")) >= 1)
+        {
+            SceneManager.LoadScene("SecondInterlude");
+        }
     }
 
     public void InsertarAttemptNivelUno()
@@ -143,12 +148,16 @@ public class Navegacion : MonoBehaviour
         Debug.Log(AdministradorNivel.instancia.HoraInicio);
         Debug.Log(AdministradorNivel.instancia.HoraFinal);
         InsertarAttemptNivelDos();
+        PlayerPrefs.SetString("idLevel", "2");
         SceneManager.LoadScene("ThirdInterlude");
     }
 
     public void ToInterlude3LevelMenu()
     {
-        SceneManager.LoadScene("ThirdInterlude");
+        if (Int32.Parse(PlayerPrefs.GetString("idLevel")) >= 2)
+        {
+            SceneManager.LoadScene("ThirdInterlude");
+        }
     }
     public void ToLevel1()
     {
@@ -186,8 +195,21 @@ public class Navegacion : MonoBehaviour
         isPaused = !isPaused;
         HUDPause.SetActive(isPaused);
         Time.timeScale = isPaused ? 0 : 1;
+        //Pause music of the level
+        if (isPaused)
+        {
+            AdministradorNivel.instancia.CancionNivel.Pause();
+        } else
+        {
+            AdministradorNivel.instancia.CancionNivel.Play();
+        }
     }
 
+    //Restart level
+    public void RestartLevel()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
     // Exits application
     public void Exit()
     {
