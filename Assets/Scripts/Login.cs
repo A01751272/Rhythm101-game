@@ -10,13 +10,25 @@ public class Login : MonoBehaviour
     public TMP_InputField InputFieldPassword;
 
     private string URLInicioSesion;
+    private string URLNivel;
     public string idPlayer;
     public Login Instance;
     private string playerId;
+    private string levelMax;
+    public string playerprefId;
+
+
+    public RespuestaNivel resNivel;
+
 
     void Awake()
     {
         Instance = this;
+    }
+
+    public struct RespuestaNivel
+    {
+        public string MaxLevel;
     }
 
     public void ValidarDatosInicioSesion()
@@ -35,17 +47,48 @@ public class Login : MonoBehaviour
             string username = InputFieldUsername.text;
             string password = InputFieldPassword.text;
 
-            URLInicioSesion = "https://rhythm101-oxy65.ondigitalocean.app/players/" + username + "/" + password;
+            URLInicioSesion = "http://localhost:3000/players/" + username + "/" + password;
             UnityWebRequest request = UnityWebRequest.Get(URLInicioSesion);
             yield return request.SendWebRequest();
             if (request.result == UnityWebRequest.Result.Success)
             {
-                idPlayer = request.downloadHandler.text;
-                PlayerPrefs.SetString("idPlayer", idPlayer);
+                playerId = request.downloadHandler.text;
+                PlayerPrefs.SetString("idPlayer", playerId);
                 PlayerPrefs.Save();
                 Debug.Log("Los datos ingresados son correctos");
-                playerId = PlayerPrefs.GetString("idPlayer", "0");
-                Debug.Log("IdPlayer: " + playerId);
+
+                idPlayer = PlayerPrefs.GetString("idPlayer", "0");
+                Debug.Log("IdPlayer: " + idPlayer);
+                URLNivel = "http://localhost:3000/attempts/" + idPlayer;
+                UnityWebRequest nivelrequest = UnityWebRequest.Get(URLNivel);
+                yield return nivelrequest.SendWebRequest();
+                if (nivelrequest.result == UnityWebRequest.Result.Success)
+                {
+                    levelMax = nivelrequest.downloadHandler.text;
+                    resNivel = JsonUtility.FromJson<RespuestaNivel>(levelMax);
+
+                    if (resNivel.MaxLevel == "")
+                    {
+                        PlayerPrefs.SetString("idLevel", "1");
+                        PlayerPrefs.Save();
+                        playerprefId = PlayerPrefs.GetString("idLevel");
+                        Debug.Log("El nivel máximo es: " + playerprefId);
+
+                    }
+                    else
+                    {
+                        PlayerPrefs.SetString("idLevel", resNivel.MaxLevel.ToString());
+                        PlayerPrefs.Save();
+                        playerprefId = PlayerPrefs.GetString("idLevel");
+                        Debug.Log("El nivel máximo es: " + playerprefId);
+                    }
+                    
+                }
+                else
+                {
+                    Debug.Log("Fallo en obtener el nivel máximo");
+                }
+
                 Navegacion.Instance.ToLevelMenu();
             }
             else
