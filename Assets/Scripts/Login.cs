@@ -47,7 +47,7 @@ public class Login : MonoBehaviour
             string username = InputFieldUsername.text;
             string password = InputFieldPassword.text;
 
-            URLInicioSesion = "http://localhost:3000/players/" + username + "/" + password;
+            URLInicioSesion = "https://rhythm101-oxy65.ondigitalocean.app/players/" + username + "/" + password;
             UnityWebRequest request = UnityWebRequest.Get(URLInicioSesion);
             yield return request.SendWebRequest();
             if (request.result == UnityWebRequest.Result.Success)
@@ -59,7 +59,7 @@ public class Login : MonoBehaviour
 
                 idPlayer = PlayerPrefs.GetString("idPlayer", "0");
                 Debug.Log("IdPlayer: " + idPlayer);
-                URLNivel = "http://localhost:3000/attempts/" + idPlayer;
+                URLNivel = "https://rhythm101-oxy65.ondigitalocean.app/attempts/" + idPlayer;
                 UnityWebRequest nivelrequest = UnityWebRequest.Get(URLNivel);
                 yield return nivelrequest.SendWebRequest();
                 if (nivelrequest.result == UnityWebRequest.Result.Success)
