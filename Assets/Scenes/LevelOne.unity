@@ -602,6 +602,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   velocidadCirculos: 1
   VectorCirculos: 000000000100000002000000040000000000000001000000030000000000000001000000020000000100000003000000000000000100000003000000000000000200000001000000020000000000000003000000
+  BotonPausa: {fileID: 2061956227}
   CanvasFinalNivel: {fileID: 2120536328}
 --- !u!4 &256314483
 Transform:
@@ -3399,6 +3400,7 @@ MonoBehaviour:
   HUDPause: {fileID: 1358993623}
   TutorialPanel1: {fileID: 880572235}
   TutorialPanel2: {fileID: 353092812}
+  isPaused: 0
 --- !u!1001 &1053441205
 PrefabInstance:
   m_ObjectHideFlags: 0

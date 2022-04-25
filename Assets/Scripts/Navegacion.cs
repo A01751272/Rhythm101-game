@@ -19,7 +19,7 @@ public class Navegacion : MonoBehaviour
     private bool TutorialOn = false;
     private bool Panel1On = true;
     private bool Panel2On = false;
-    private bool isPaused = false;
+    public bool isPaused = false;
     private string score;
     private string level;
     private string BeginTime;

@@ -53,7 +53,7 @@ public class Forms : MonoBehaviour
         ability = ((ability1 + ability2 + ability3 + ability4) / 4).ToString();
 
         player = PlayerPrefs.GetString("idPlayer", "0"); //GetCurrentIdPlayer
-
+        Debug.Log(player);
         WWWForm Forma = new WWWForm();
         Forma.AddField("number", formnumber1);
         Forma.AddField("ability", ability);
@@ -72,8 +72,6 @@ public class Forms : MonoBehaviour
         {
             Debug.Log("Error al registrar form");
         }
-            
-        
     }
 
     private IEnumerator InsertFormFinal()

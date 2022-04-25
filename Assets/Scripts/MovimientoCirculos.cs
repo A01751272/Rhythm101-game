@@ -18,6 +18,7 @@ public class MovimientoCirculos : MonoBehaviour
     public int[] VectorCirculos = { 0, 1, 2, 3, 0, 1, 3, 0, 1, 2, 1, 3, 0, 1, 3, 0, 2, 1, 2, 0, 3 };
 
     private bool IniciarCorrutina = false;
+    public GameObject BotonPausa;
 
     //private string secretKey = "pvah";
     //public string addScoreURL = "http://localhost/pruebaunity/agregaPuntaje.php?";
@@ -26,13 +27,14 @@ public class MovimientoCirculos : MonoBehaviour
 
     void Start()
     {
+        Time.timeScale = Navegacion.Instance.isPaused ? 0 : 1;
         CanvasFinalNivel.SetActive(false);
     }
 
     public IEnumerator MostrarCirculos()
     {
         foreach (int i in VectorCirculos)
-        {
+        {   
             if (i == 4)
             {
                 yield return new WaitForSeconds(velocidadCirculos);
@@ -51,9 +53,15 @@ public class MovimientoCirculos : MonoBehaviour
         AdministradorNivel.instancia.CanvasInfoNivel.SetActive(false);
         AdministradorNivel.instancia.CancionNivel.Stop();
         AdministradorNivel.instancia.TextoFinalNivel.text = "You finished the level! Congratulations! Your score was: " + AdministradorNivel.instancia.PuntajeActual;
+        HidePauseButton();
         AdministradorNivel.instancia.BotonSiguienteEscena.SetActive(true);
         //StartCoroutine(PostScores("1", administrador.instance.PuntajeActual));
         AdministradorNivel.instancia.TerminarNivel();
+    }
+
+    public void HidePauseButton()
+    {
+        BotonPausa.SetActive(false);
     }
 
     /*

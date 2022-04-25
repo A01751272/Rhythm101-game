@@ -12,6 +12,8 @@ public class SignIn : MonoBehaviour
     public TMP_InputField InputFieldCity;
     public TMP_InputField InputFieldUsername;
     public TMP_InputField InputFieldPassword;
+    private string URLId;
+    private string playerId;
 
     private string URLValidarJugador;
     public string idPlayerForm;
@@ -70,6 +72,22 @@ public class SignIn : MonoBehaviour
                 {
                     string respuestaServidor = postrequest.downloadHandler.text;
                     Debug.Log(respuestaServidor);
+
+                    URLId = "https://rhythm101-oxy65.ondigitalocean.app/players/" + username + "/" + password;
+                    UnityWebRequest secondrequest = UnityWebRequest.Get(URLId);
+                    yield return secondrequest.SendWebRequest();
+
+                    if (secondrequest.result == UnityWebRequest.Result.Success)
+                    {
+                        playerId = secondrequest.downloadHandler.text;
+                        PlayerPrefs.SetString("idPlayer", playerId);
+                        PlayerPrefs.Save();
+                        Debug.Log("Se obtiene el id de usuario");
+                    }
+                    else
+                    {
+                        Debug.Log("Los datos ingresados no son correctos. Revisarlos y volver a intentar");
+                    }
                     Navegacion.Instance.ToInitialForm();
                 }
                 else
@@ -78,5 +96,32 @@ public class SignIn : MonoBehaviour
                 }
             }
         }
+    }
+
+    public void showId()
+    {
+        StartCoroutine(SearchId());
+    }
+
+    public IEnumerator SearchId()
+    {
+            string username = InputFieldUsername.text;
+            string password = InputFieldPassword.text;
+
+            URLId = "https://rhythm101-oxy65.ondigitalocean.app/players/" + username + "/" + password;
+            UnityWebRequest request = UnityWebRequest.Get(URLId);
+            yield return request.SendWebRequest();
+
+            if (request.result == UnityWebRequest.Result.Success)
+            {
+                playerId = request.downloadHandler.text;
+                PlayerPrefs.SetString("idPlayer", playerId);
+                PlayerPrefs.Save();
+                Debug.Log("Se obtiene el id de usuario");
+            }
+            else
+            {
+                Debug.Log("Los datos ingresados no son correctos. Revisarlos y volver a intentar");
+            }
     }
 }
