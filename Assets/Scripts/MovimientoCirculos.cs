@@ -18,7 +18,16 @@ public class MovimientoCirculos : MonoBehaviour
     public int[] VectorCirculos = { 0, 1, 2, 3, 0, 1, 3, 0, 1, 2, 1, 3, 0, 1, 3, 0, 2, 1, 2, 0, 3 };
 
     private bool IniciarCorrutina = false;
+    public int MinimumScore;
     public GameObject BotonPausa;
+
+
+    public static MovimientoCirculos Instance;
+
+    void Awake()
+    {
+        Instance = this;
+    }
 
     //private string secretKey = "pvah";
     //public string addScoreURL = "http://localhost/pruebaunity/agregaPuntaje.php?";
@@ -52,7 +61,7 @@ public class MovimientoCirculos : MonoBehaviour
         CanvasFinalNivel.SetActive(true);
         AdministradorNivel.instancia.CanvasInfoNivel.SetActive(false);
         AdministradorNivel.instancia.CancionNivel.Stop();
-        if(AdministradorNivel.instancia.PuntajeActual <= 100)
+        if(AdministradorNivel.instancia.PuntajeActual <= MinimumScore)
         {
             AdministradorNivel.instancia.TextoFinalNivel.text = "You didn't reach the minimum score! Try again! Your score was: " + AdministradorNivel.instancia.PuntajeActual;
         }

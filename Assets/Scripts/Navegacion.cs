@@ -64,7 +64,7 @@ public class Navegacion : MonoBehaviour
     public void ToFinalForm()
     {
 
-        if (AdministradorNivel.instancia.PuntajeActual <= 100)
+        if (AdministradorNivel.instancia.PuntajeActual <= MovimientoCirculos.Instance.MinimumScore)
         {
             SceneManager.LoadScene("LevelsMenu");
         }
@@ -100,7 +100,7 @@ public class Navegacion : MonoBehaviour
     }
     public void ToInterlude2()
     {
-        if (AdministradorNivel.instancia.PuntajeActual <= 100)
+        if (AdministradorNivel.instancia.PuntajeActual <= MovimientoCirculos.Instance.MinimumScore)
         {
             SceneManager.LoadScene("LevelsMenu");
         }
@@ -171,7 +171,7 @@ public class Navegacion : MonoBehaviour
 
     public void ToInterlude3()
     {
-        if (AdministradorNivel.instancia.PuntajeActual <= 100)
+        if (AdministradorNivel.instancia.PuntajeActual <= MovimientoCirculos.Instance.MinimumScore)
         {
             SceneManager.LoadScene("LevelsMenu");
         }
