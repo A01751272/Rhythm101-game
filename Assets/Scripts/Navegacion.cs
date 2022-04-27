@@ -25,6 +25,7 @@ public class Navegacion : MonoBehaviour
     private string BeginTime;
     private string EndTime;
     private string player;
+    private string MaxLevel;
 
     public static Navegacion Instance;
 
@@ -62,12 +63,32 @@ public class Navegacion : MonoBehaviour
     }
     public void ToFinalForm()
     {
-        Debug.Log("Datos recibidos antes de navegar al Final Form");
-        Debug.Log(AdministradorNivel.instancia.PuntajeActual);
-        Debug.Log(AdministradorNivel.instancia.HoraInicio);
-        Debug.Log(AdministradorNivel.instancia.HoraFinal);
-        InsertarAttemptNivelThree();
-        SceneManager.LoadScene("FinalForm");
+
+        if (AdministradorNivel.instancia.PuntajeActual <= 100)
+        {
+            SceneManager.LoadScene("LevelsMenu");
+        }
+        else
+        {
+            Debug.Log("Datos recibidos antes de navegar al Final Form");
+            Debug.Log(AdministradorNivel.instancia.PuntajeActual);
+            Debug.Log(AdministradorNivel.instancia.HoraInicio);
+            Debug.Log(AdministradorNivel.instancia.HoraFinal);
+            InsertarAttemptNivelThree();
+
+            MaxLevel = PlayerPrefs.GetString("idLevel");
+            if (MaxLevel == "3")
+            {
+                SceneManager.LoadScene("Credits");
+            }
+            else
+            {
+                PlayerPrefs.SetString("idLevel", "3");
+                SceneManager.LoadScene("FinalForm");
+            }
+        }
+
+        
     }
     public void ToCredits()
     {
@@ -79,13 +100,20 @@ public class Navegacion : MonoBehaviour
     }
     public void ToInterlude2()
     {
-        Debug.Log("Datos recibidos antes de navegar al Interlude 2");
-        Debug.Log(AdministradorNivel.instancia.PuntajeActual);
-        Debug.Log(AdministradorNivel.instancia.HoraInicio);
-        Debug.Log(AdministradorNivel.instancia.HoraFinal);
-        InsertarAttemptNivelUno();
-        PlayerPrefs.SetString("idLevel", "1");
-        SceneManager.LoadScene("SecondInterlude");
+        if (AdministradorNivel.instancia.PuntajeActual <= 100)
+        {
+            SceneManager.LoadScene("LevelsMenu");
+        }
+        else
+        {
+            Debug.Log("Datos recibidos antes de navegar al Interlude 2");
+            Debug.Log(AdministradorNivel.instancia.PuntajeActual);
+            Debug.Log(AdministradorNivel.instancia.HoraInicio);
+            Debug.Log(AdministradorNivel.instancia.HoraFinal);
+            InsertarAttemptNivelUno();
+            PlayerPrefs.SetString("idLevel", "1");
+            SceneManager.LoadScene("SecondInterlude");
+        }
     }
 
     public void ToInterlude2LevelMenu()
@@ -143,13 +171,20 @@ public class Navegacion : MonoBehaviour
 
     public void ToInterlude3()
     {
-        Debug.Log("Datos recibidos antes de navegar al Interlude 3");
-        Debug.Log(AdministradorNivel.instancia.PuntajeActual);
-        Debug.Log(AdministradorNivel.instancia.HoraInicio);
-        Debug.Log(AdministradorNivel.instancia.HoraFinal);
-        InsertarAttemptNivelDos();
-        PlayerPrefs.SetString("idLevel", "2");
-        SceneManager.LoadScene("ThirdInterlude");
+        if (AdministradorNivel.instancia.PuntajeActual <= 100)
+        {
+            SceneManager.LoadScene("LevelsMenu");
+        }
+        else
+        {
+            Debug.Log("Datos recibidos antes de navegar al Interlude 3");
+            Debug.Log(AdministradorNivel.instancia.PuntajeActual);
+            Debug.Log(AdministradorNivel.instancia.HoraInicio);
+            Debug.Log(AdministradorNivel.instancia.HoraFinal);
+            InsertarAttemptNivelDos();
+            PlayerPrefs.SetString("idLevel", "2");
+            SceneManager.LoadScene("ThirdInterlude");
+        }
     }
 
     public void ToInterlude3LevelMenu()
@@ -161,7 +196,10 @@ public class Navegacion : MonoBehaviour
     }
     public void ToLevel1()
     {
+       
         SceneManager.LoadScene("LevelOne");
+     
+        
     }
     public void ToLevel2()
     {

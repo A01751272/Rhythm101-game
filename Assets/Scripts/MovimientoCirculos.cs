@@ -52,7 +52,14 @@ public class MovimientoCirculos : MonoBehaviour
         CanvasFinalNivel.SetActive(true);
         AdministradorNivel.instancia.CanvasInfoNivel.SetActive(false);
         AdministradorNivel.instancia.CancionNivel.Stop();
-        AdministradorNivel.instancia.TextoFinalNivel.text = "You finished the level! Congratulations! Your score was: " + AdministradorNivel.instancia.PuntajeActual;
+        if(AdministradorNivel.instancia.PuntajeActual <= 100)
+        {
+            AdministradorNivel.instancia.TextoFinalNivel.text = "You didn't reach the minimum score! Try again! Your score was: " + AdministradorNivel.instancia.PuntajeActual;
+        }
+        else
+        {
+            AdministradorNivel.instancia.TextoFinalNivel.text = "You finished the level! Congratulations! Your score was: " + AdministradorNivel.instancia.PuntajeActual;
+        }
         HidePauseButton();
         AdministradorNivel.instancia.BotonSiguienteEscena.SetActive(true);
         //StartCoroutine(PostScores("1", administrador.instance.PuntajeActual));
