@@ -49,8 +49,8 @@ public class Forms : MonoBehaviour
         int ability3 = int.Parse(InputFieldAnswer7.text);
         int ability4 = int.Parse(InputFieldAnswer8.text);
 
-        opinion = ((opinion1 + opinion2 + opinion3 + opinion4) / 4).ToString();
-        ability = ((ability1 + ability2 + ability3 + ability4) / 4).ToString();
+        opinion = ((opinion1 + opinion2 + opinion3 + opinion4) / 4.0).ToString();
+        ability = ((ability1 + ability2 + ability3 + ability4) / 4.0).ToString();
 
         player = PlayerPrefs.GetString("idPlayer", "0"); //GetCurrentIdPlayer
         Debug.Log(player);
