@@ -18,11 +18,19 @@ public class SignIn : MonoBehaviour
     private string URLValidarJugador;
     public string idPlayerForm;
     public SignIn Instance;
+
+    public GameObject errorpanel;
     void Awake()
     {
         Instance = this;
     }
-
+    public void Update()
+    {
+        if (Input.anyKey)
+        {
+            errorpanel.SetActive(false);
+        }
+    }
     public void InsertarDatosRegistro()
     {
         StartCoroutine(InsertNewPlayer());
@@ -37,6 +45,8 @@ public class SignIn : MonoBehaviour
             InputFieldUsername.text == "" ||
             InputFieldPassword.text == "")
         {
+            errorpanel.GetComponentInChildren<TextMeshProUGUI>().text = "Please fill al inputs before signing in";
+            errorpanel.SetActive(true);
             Debug.Log("Please fill al inputs before signing in");
         }
         else
@@ -48,6 +58,8 @@ public class SignIn : MonoBehaviour
             yield return request.SendWebRequest();
             if (request.result == UnityWebRequest.Result.Success)
             {
+                errorpanel.GetComponentInChildren<TextMeshProUGUI>().text = "This username already exists. Try another one";
+                errorpanel.SetActive(true);
                 Debug.Log("Ya existe este username");
             }
             else
@@ -86,12 +98,16 @@ public class SignIn : MonoBehaviour
                     }
                     else
                     {
+                        errorpanel.GetComponentInChildren<TextMeshProUGUI>().text = "Invalid input information. Please check and try again";
+                        errorpanel.SetActive(true);
                         Debug.Log("Los datos ingresados no son correctos. Revisarlos y volver a intentar");
                     }
                     Navegacion.Instance.ToInitialForm();
                 }
                 else
                 {
+                    errorpanel.GetComponentInChildren<TextMeshProUGUI>().text = "Error registering player";
+                    errorpanel.SetActive(true);
                     Debug.Log("Error al registrar jugador");
                 }
             }

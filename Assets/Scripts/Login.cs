@@ -17,6 +17,8 @@ public class Login : MonoBehaviour
     private string levelMax;
     public string playerprefId;
 
+    public GameObject panelerror;
+
 
     public RespuestaNivel resNivel;
 
@@ -24,6 +26,14 @@ public class Login : MonoBehaviour
     void Awake()
     {
         Instance = this;
+    }
+
+    private void Update()
+    {
+        if (Input.anyKey)
+        {
+            panelerror.SetActive(false);
+        }
     }
 
     public struct RespuestaNivel
@@ -93,6 +103,7 @@ public class Login : MonoBehaviour
             }
             else
             {
+                panelerror.SetActive(true);
                 Debug.Log("Los datos ingresados no son correctos. Revisarlos y volver a intentar");
             }
         }
