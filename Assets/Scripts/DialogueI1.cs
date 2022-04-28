@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 //Clase para generar los cuadros de dialogo en el juego
-public class Dialogue : MonoBehaviour
+public class DialogueI1 : MonoBehaviour
 {
     //Atributos de clase
     public TextMeshProUGUI textComponent; //Texto al que se vinvulara
@@ -11,6 +11,7 @@ public class Dialogue : MonoBehaviour
     public float textSpeed; //Tiempo de pausa entre letra y letra
     private int index;
     public GameObject ButtonSkip;
+    public GameObject Character1;
 
     // Start is called before the first frame update
     void Start()
@@ -44,7 +45,7 @@ public class Dialogue : MonoBehaviour
         yield return new WaitForSeconds(1);
         index = 0;
         StartCoroutine(TypeLine());
-        yield return new WaitForSeconds(2);
+        yield return new WaitForSeconds(5);
         ButtonSkip.SetActive(true);
     }
 
@@ -66,10 +67,15 @@ public class Dialogue : MonoBehaviour
         {
             index++;
             textComponent.text = string.Empty;
+            if(index == 4)
+            {
+                Character1.SetActive(true);
+            }
             StartCoroutine(TypeLine());
         }
         else
         {
+            Character1.SetActive(false);
             gameObject.SetActive(false);
         }
     }

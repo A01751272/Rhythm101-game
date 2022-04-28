@@ -461,7 +461,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!212 &125470170
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -711,12 +711,12 @@ MonoBehaviour:
     life. "
   - "There is just one problem\u2026"
   - "You have never played the drums before\u2026"
-  - "Player: I\u2019m lucky mom used to be in a band in high school and that her
-    old drumming set is still here collecting dust. Now I just have to find out a
-    way to learn to play the drums in a week\u2026 I\u2019m seriously going to need
-    some help\u2026 "
-  - "Mitch Mitchell: I heard you could use some help\u2026"
-  - "Player: I really could\u2026 But who are you?"
+  - "You: I\u2019m lucky mom used to be in a band in high school and that her old
+    drumming set is still here collecting dust. Now I just have to find out a way
+    to learn to play the drums in a week\u2026 I\u2019m seriously going to need some
+    help\u2026 "
+  - "?????: I heard you could use some help\u2026"
+  - "You: I really could\u2026 But who are you?"
   - 'Mitch Mitchell: My name is Mitch Mitchell, during my early drumming days I gained
     experience from playing in bands such as Peter Nelson & the Travellers and the
     Coronets...'
@@ -725,10 +725,11 @@ MonoBehaviour:
     for which I was inducted into the Rock and Roll Hall of Fame in 1992..."
   - "Mitch Mitchell: If you want me to I\u2019d love to accompany you on your learning
     journey."
-  - 'Player: Yes please! I really need some help'
+  - 'You: Yes please! I really need some help'
   - 'Mitch Mitchell: Well, then let''s start right away!'
   textSpeed: 0.04
   ButtonSkip: {fileID: 1578778150}
+  Character1: {fileID: 125470169}
 --- !u!1 &1516707633
 GameObject:
   m_ObjectHideFlags: 0
