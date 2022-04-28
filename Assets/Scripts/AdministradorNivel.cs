@@ -12,6 +12,8 @@ public class AdministradorNivel : MonoBehaviour
     public static AdministradorNivel instancia;
 
     public AudioSource CancionNivel;
+    public AudioSource SonidoMultiplicador;
+
 
     public int PuntajeActual;
     private int PuntajeGolpeExitoso = 100;
@@ -74,6 +76,7 @@ public class AdministradorNivel : MonoBehaviour
         if (ContadorMultiplicador >= 4)
         {
             MultiplicadorActual++;
+            SonidoMultiplicador.Play();
             ContadorMultiplicador = 0;
         }
         else { }
