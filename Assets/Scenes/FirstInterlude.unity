@@ -242,6 +242,7 @@ MonoBehaviour:
   HUDPause: {fileID: 0}
   TutorialPanel1: {fileID: 0}
   TutorialPanel2: {fileID: 0}
+  isPaused: 0
 --- !u!1 &109841396
 GameObject:
   m_ObjectHideFlags: 0
@@ -704,11 +705,28 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   textComponent: {fileID: 117260966}
   lines:
-  - This is the space for the first interlude. This is the space for the first interlude.
-    This is the space for the first interlude. This is the space for the first interlude.
-    This is the space for the first interlude. This is the space for the first interlude
-    blablabla blablabla.
-  - 'Player: This is the space for the first interlude'
+  - "As you were walking home yesterday, you saw a poster about an upcoming drumming
+    competition with a prize of a $100, 000 dollars and the once in a lifetime opportunity
+    to meet your favorite drummer, Ginger Baker, who you\u2019ve admired your whole
+    life. "
+  - "There is just one problem\u2026"
+  - "You have never played the drums before\u2026"
+  - "Player: I\u2019m lucky mom used to be in a band in high school and that her
+    old drumming set is still here collecting dust. Now I just have to find out a
+    way to learn to play the drums in a week\u2026 I\u2019m seriously going to need
+    some help\u2026 "
+  - "Mitch Mitchell: I heard you could use some help\u2026"
+  - "Player: I really could\u2026 But who are you?"
+  - 'Mitch Mitchell: My name is Mitch Mitchell, during my early drumming days I gained
+    experience from playing in bands such as Peter Nelson & the Travellers and the
+    Coronets...'
+  - "Mitch Mitchell: However I\u2019m better known for playing in The Jimi Hendrix
+    Experience, a group that was formed around Jimi Hendrix in the late 1960s, and
+    for which I was inducted into the Rock and Roll Hall of Fame in 1992..."
+  - "Mitch Mitchell: If you want me to I\u2019d love to accompany you on your learning
+    journey."
+  - 'Player: Yes please! I really need some help'
+  - 'Mitch Mitchell: Well, then let''s start right away!'
   textSpeed: 0.04
 --- !u!1 &1516707633
 GameObject:
