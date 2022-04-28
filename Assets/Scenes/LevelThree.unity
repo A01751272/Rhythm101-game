@@ -525,6 +525,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7470790728677838845, guid: d8ec19caada2528498d67c971b4f99fb, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: f993790ea10de7d46b589d996705d2f8, type: 2}
     - target: {fileID: 7470790728677838847, guid: d8ec19caada2528498d67c971b4f99fb, type: 3}
       propertyPath: TeclaCorrecta
       value: 107
@@ -600,7 +604,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 505173c6fe8b8f549963e4852b3317e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velocidadCirculos: 1
+  velocidadCirculos: 0.8
   VectorCirculos: 000000000100000002000000040000000000000001000000030000000000000001000000020000000100000003000000000000000100000003000000000000000200000001000000020000000000000003000000
   MinimumScore: 700
   BotonPausa: {fileID: 2061956227}
@@ -3465,6 +3469,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7470790728677838845, guid: d8ec19caada2528498d67c971b4f99fb, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: f993790ea10de7d46b589d996705d2f8, type: 2}
     - target: {fileID: 7470790728677838847, guid: d8ec19caada2528498d67c971b4f99fb, type: 3}
       propertyPath: TeclaCorrecta
       value: 115
@@ -3884,6 +3892,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7470790728677838845, guid: d8ec19caada2528498d67c971b4f99fb, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: f993790ea10de7d46b589d996705d2f8, type: 2}
     - target: {fileID: 7470790728677838846, guid: d8ec19caada2528498d67c971b4f99fb, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.x
       value: 12
@@ -5983,6 +5995,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7470790728677838845, guid: d8ec19caada2528498d67c971b4f99fb, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: f993790ea10de7d46b589d996705d2f8, type: 2}
     - target: {fileID: 7470790728677838847, guid: d8ec19caada2528498d67c971b4f99fb, type: 3}
       propertyPath: TeclaCorrecta
       value: 106
