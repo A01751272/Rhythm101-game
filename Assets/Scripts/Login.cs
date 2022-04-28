@@ -50,7 +50,9 @@ public class Login : MonoBehaviour
     {
         if (InputFieldUsername.text == "" || InputFieldPassword.text == "")
         {
-            Debug.Log("Please fill al inputs before signing in");
+            panelerror.GetComponentInChildren<TextMeshProUGUI>().text = "Please fill al inputs before sending the form.";
+            panelerror.SetActive(true);
+            Debug.Log("Please fill all inputs before signing in");
         }
         else
         {
@@ -99,10 +101,11 @@ public class Login : MonoBehaviour
                     Debug.Log("Fallo en obtener el nivel máximo");
                 }
 
-                Navegacion.Instance.ToLevelMenu();
+                Navegacion.Instance.ToMainMenu();
             }
             else
             {
+                panelerror.GetComponentInChildren<TextMeshProUGUI>().text = "Incorrect username or password, please check and try again. If you don't have an account try the sing in option.";
                 panelerror.SetActive(true);
                 Debug.Log("Los datos ingresados no son correctos. Revisarlos y volver a intentar");
             }
