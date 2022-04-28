@@ -326,6 +326,7 @@ MonoBehaviour:
   HUDPause: {fileID: 0}
   TutorialPanel1: {fileID: 0}
   TutorialPanel2: {fileID: 0}
+  isPaused: 0
 --- !u!1 &109841396
 GameObject:
   m_ObjectHideFlags: 0
@@ -453,6 +454,7 @@ MonoBehaviour:
     blablabla blablabla.
   - 'Player: This is the space for the first interlude'
   textSpeed: 0.04
+  ButtonSkip: {fileID: 2024176395}
 --- !u!114 &1456748717
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -863,7 +865,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2024176396
 RectTransform:
   m_ObjectHideFlags: 0

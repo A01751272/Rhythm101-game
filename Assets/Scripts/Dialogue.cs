@@ -10,6 +10,7 @@ public class Dialogue : MonoBehaviour
     public string[] lines; //Lineas de texto a mostrar
     public float textSpeed; //Tiempo de pausa entre letra y letra
     private int index;
+    public GameObject ButtonSkip;
 
     // Start is called before the first frame update
     void Start()
@@ -40,9 +41,11 @@ public class Dialogue : MonoBehaviour
     IEnumerator StartDialogue()
     {
         //Iniciamos a mostrar el dialogo
-        yield return new WaitForSeconds(2);
+        yield return new WaitForSeconds(1);
         index = 0;
         StartCoroutine(TypeLine());
+        yield return new WaitForSeconds(2);
+        ButtonSkip.SetActive(true);
     }
 
     IEnumerator TypeLine()
