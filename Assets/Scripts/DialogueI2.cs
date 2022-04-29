@@ -69,7 +69,11 @@ public class DialogueI2 : MonoBehaviour
         {
             index++;
             textComponent.text = string.Empty;
-            if(index == 4)
+            if (index == 2)
+            {
+                ButtonSkip.SetActive(true);
+            }
+            if (index == 4)
             {
                 Character1.SetActive(false);
                 Character2.SetActive(true);

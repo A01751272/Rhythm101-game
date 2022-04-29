@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using System;
 //Clase para generar los cuadros de dialogo en el juego
 public class DialogueI1 : MonoBehaviour
 {
@@ -45,8 +46,6 @@ public class DialogueI1 : MonoBehaviour
         yield return new WaitForSeconds(1);
         index = 0;
         StartCoroutine(TypeLine());
-        yield return new WaitForSeconds(5);
-        ButtonSkip.SetActive(true);
     }
 
     IEnumerator TypeLine()
@@ -67,6 +66,10 @@ public class DialogueI1 : MonoBehaviour
         {
             index++;
             textComponent.text = string.Empty;
+            if(index == 2)
+            {
+                ButtonSkip.SetActive(true);
+            }
             if(index == 4)
             {
                 Character1.SetActive(true);
