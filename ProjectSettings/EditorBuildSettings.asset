@@ -5,9 +5,6 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
   - enabled: 1
     path: Assets/Scenes/LogIn.unity
     guid: 68a7901fc2f0b144ea59663c5809b715
@@ -33,20 +30,11 @@ EditorBuildSettings:
     path: Assets/Scenes/Credits.unity
     guid: cdf437badbf1f7b4897411e7bdf5ad15
   - enabled: 1
-    path: Assets/Scenes/PruebaDialogos.unity
-    guid: e89a806ed15c0de4a9dd2533b0bbd717
-  - enabled: 1
-    path: Assets/Scenes/pruebaNetwork.unity
-    guid: 84998bfb39e731241b5a8de56376030d
-  - enabled: 1
     path: Assets/Scenes/Ranking.unity
     guid: ba037a9a1154eeb4e80fd6955001da6e
   - enabled: 1
     path: Assets/Scenes/SecondInterlude.unity
     guid: 80d8b155b91f2f84d9a44a77093bf0f2
-  - enabled: 1
-    path: Assets/Scenes/segundaPrueba.unity
-    guid: 8673a431bc8799c41bd0e2f590f8d0de
   - enabled: 1
     path: Assets/Scenes/ThirdInterlude.unity
     guid: 0a251c16847ebf446aa3a169fdedfa25
@@ -55,8 +43,8 @@ EditorBuildSettings:
     guid: 295707eb28355a14fb265d6d7a52c4c4
   - enabled: 1
     path: Assets/Scenes/LevelTwo.unity
-    guid: 45f406d688b295c4d8e81b3ee859ad45
+    guid: b02c2ef7a5e8e474689e3205159c6335
   - enabled: 1
     path: Assets/Scenes/LevelThree.unity
-    guid: 9c4f7f97f6797c044be3e6a6f14ccf4c
+    guid: 157b8942fccf22b4ea55a28bc68b0fd7
   m_configObjects: {}
