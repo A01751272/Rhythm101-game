@@ -105,7 +105,7 @@ public class Login : MonoBehaviour
             }
             else
             {
-                panelerror.GetComponentInChildren<TextMeshProUGUI>().text = "Incorrect username or password, please check and try again. If you don't have an account try the sing in option.";
+                panelerror.GetComponentInChildren<TextMeshProUGUI>().text = "Incorrect username or password, please check and try again. If you don't have an account try the sign in option.";
                 panelerror.SetActive(true);
                 Debug.Log("Los datos ingresados no son correctos. Revisarlos y volver a intentar");
             }

@@ -1855,7 +1855,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_text: "Incorrect username or password, please check and try again. \nIf you don't
-    have an account try the sing in option."
+    have an account try the sign in option."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5cefb49045d79a447bd168cf84dca9a1, type: 2}
   m_sharedMaterial: {fileID: -1087031883453582729, guid: 5cefb49045d79a447bd168cf84dca9a1, type: 2}
