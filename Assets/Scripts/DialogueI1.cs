@@ -19,6 +19,7 @@ public class DialogueI1 : MonoBehaviour
     {
         //Vaciamos el texto e iniciamos a mostrar dialogo
         textComponent.text = string.Empty;
+        textSpeed = 0;
         StartCoroutine(StartDialogue());
     }
 
