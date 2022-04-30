@@ -2224,6 +2224,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 432700790715559955, guid: 573ce41f7c51fe9408cc598f2dd66722, type: 3}
+      propertyPath: m_UiScaleMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 432700790715559955, guid: 573ce41f7c51fe9408cc598f2dd66722, type: 3}
+      propertyPath: m_ReferenceResolution.x
+      value: 1920
+      objectReference: {fileID: 0}
+    - target: {fileID: 432700790715559955, guid: 573ce41f7c51fe9408cc598f2dd66722, type: 3}
+      propertyPath: m_ReferenceResolution.y
+      value: 1080
+      objectReference: {fileID: 0}
     - target: {fileID: 432700790715559965, guid: 573ce41f7c51fe9408cc598f2dd66722, type: 3}
       propertyPath: m_Name
       value: CanvasPausa
@@ -2252,6 +2264,18 @@ PrefabInstance:
     - target: {fileID: 1041342155188211777, guid: 017da63004ef6344eb5984d0629daa2e, type: 3}
       propertyPath: m_Name
       value: CanvasInicioNivel
+      objectReference: {fileID: 0}
+    - target: {fileID: 1041342155188211779, guid: 017da63004ef6344eb5984d0629daa2e, type: 3}
+      propertyPath: m_UiScaleMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1041342155188211779, guid: 017da63004ef6344eb5984d0629daa2e, type: 3}
+      propertyPath: m_ReferenceResolution.x
+      value: 1920
+      objectReference: {fileID: 0}
+    - target: {fileID: 1041342155188211779, guid: 017da63004ef6344eb5984d0629daa2e, type: 3}
+      propertyPath: m_ReferenceResolution.y
+      value: 1080
       objectReference: {fileID: 0}
     - target: {fileID: 1041342155188211781, guid: 017da63004ef6344eb5984d0629daa2e, type: 3}
       propertyPath: m_Pivot.x
@@ -2539,6 +2563,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6218119255933546306, guid: e6ccdd380a949144288efd4cefb69de4, type: 3}
+      propertyPath: m_UiScaleMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6218119255933546306, guid: e6ccdd380a949144288efd4cefb69de4, type: 3}
+      propertyPath: m_ReferenceResolution.x
+      value: 1920
+      objectReference: {fileID: 0}
+    - target: {fileID: 6218119255933546306, guid: e6ccdd380a949144288efd4cefb69de4, type: 3}
+      propertyPath: m_ReferenceResolution.y
+      value: 1080
+      objectReference: {fileID: 0}
     - target: {fileID: 6218119255933546308, guid: e6ccdd380a949144288efd4cefb69de4, type: 3}
       propertyPath: m_Name
       value: CanvasTutorial
@@ -2556,6 +2592,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 7013648492318127125, guid: aa16b3da2194baa478ab98400faa8437, type: 3}
+      propertyPath: m_UiScaleMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7013648492318127125, guid: aa16b3da2194baa478ab98400faa8437, type: 3}
+      propertyPath: m_ReferenceResolution.x
+      value: 1920
+      objectReference: {fileID: 0}
+    - target: {fileID: 7013648492318127125, guid: aa16b3da2194baa478ab98400faa8437, type: 3}
+      propertyPath: m_ReferenceResolution.y
+      value: 1080
+      objectReference: {fileID: 0}
     - target: {fileID: 7013648492318127127, guid: aa16b3da2194baa478ab98400faa8437, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -2736,6 +2784,18 @@ PrefabInstance:
     - target: {fileID: 7942403634807777339, guid: 6ec59e391fdf1434b8727c19f2e8e7d1, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7942403634807777341, guid: 6ec59e391fdf1434b8727c19f2e8e7d1, type: 3}
+      propertyPath: m_UiScaleMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7942403634807777341, guid: 6ec59e391fdf1434b8727c19f2e8e7d1, type: 3}
+      propertyPath: m_ReferenceResolution.x
+      value: 1920
+      objectReference: {fileID: 0}
+    - target: {fileID: 7942403634807777341, guid: 6ec59e391fdf1434b8727c19f2e8e7d1, type: 3}
+      propertyPath: m_ReferenceResolution.y
+      value: 1080
       objectReference: {fileID: 0}
     - target: {fileID: 7942403634807777343, guid: 6ec59e391fdf1434b8727c19f2e8e7d1, type: 3}
       propertyPath: m_Name
