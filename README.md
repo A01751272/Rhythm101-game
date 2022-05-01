@@ -11,14 +11,15 @@ This videogame was developed using Unity (Editor Version: 2021.2.11f1) on Window
 6. Select File -> Build Settings.
 7. Select which operating system it should be fabricated for (Windows, Mac, Linux, etc.)
 8. Select a folder in your local machine and press 'Build'
-9. Play Rhythm101 as an executable program!
+9. Play Rhythm101 as an executable program!  
+_Note: In order to export the game in a determined OS, you will need to build it from a computer with the same operating system._
 
 ## Elements to consider
-* In order to play the videogame, it requieres a WiFi Connection in order to send and store players data and progress.
+* In order to play the videogame, a WiFi Connection is required in order to send and store players' data and progress.
 * The videogame can be edited with another Unity Editor version, but it is preferable to install the version mentioned above.
-* User's progress will be saved in digital server, therefore he could play the videogame in different networks and devices.
+* Users' progress will be saved in digital server, therefore they could play the videogame in different networks and devices.
 * The web server address (DigitalOcean) where data is sent can be changed in Assets -> Scripts
-* In order to function correctly, the folder and all its elements (not only the executable) produced in the build phase needs to be together.
+* In order to function correctly, the folder and all its elements (not only the executable) produced in the build phase need to be together.
 * Details on the web server, the API and database are explained in the [Rhythm101 API repository](https://github.com/pablogonzalezdelaparra/rhythm101)
 * We recommend forking this repository in order to have full ownership and editing capabilities.
 
