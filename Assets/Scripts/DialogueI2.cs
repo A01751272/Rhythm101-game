@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
 //Clase para generar los cuadros de dialogo en el juego
 public class DialogueI2 : MonoBehaviour
 {
@@ -88,6 +89,7 @@ public class DialogueI2 : MonoBehaviour
             StopAllCoroutines();
             Character2.SetActive(false);
             gameObject.SetActive(false);
+            SceneManager.LoadScene("LevelTwo");
         }
     }
 }

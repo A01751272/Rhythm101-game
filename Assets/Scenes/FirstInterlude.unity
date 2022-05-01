@@ -725,7 +725,7 @@ MonoBehaviour:
     for which I was inducted into the Rock and Roll Hall of Fame in 1992..."
   - "Mitch Mitchell: If you want me to I\u2019d love to accompany you on your learning
     journey."
-  - 'You: Yes please! I really need some help'
+  - 'You: Yes please! I really need some help.'
   - 'Mitch Mitchell: Well, then let''s start right away!'
   textSpeed: 0.04
   ButtonSkip: {fileID: 1578778150}
