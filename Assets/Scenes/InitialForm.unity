@@ -2776,14 +2776,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5458f82c2a078bd4e80f0ac2676f8216, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  InputFieldAnswer1: {fileID: 0}
-  InputFieldAnswer2: {fileID: 0}
-  InputFieldAnswer3: {fileID: 0}
-  InputFieldAnswer4: {fileID: 0}
-  InputFieldAnswer5: {fileID: 0}
-  InputFieldAnswer6: {fileID: 0}
-  InputFieldAnswer7: {fileID: 0}
-  InputFieldAnswer8: {fileID: 0}
+  InputFieldAnswer1: {fileID: 443251782}
+  InputFieldAnswer2: {fileID: 1734104575}
+  InputFieldAnswer3: {fileID: 42085230}
+  InputFieldAnswer4: {fileID: 1543073688}
+  InputFieldAnswer5: {fileID: 1980227059}
+  InputFieldAnswer6: {fileID: 2030621981}
+  InputFieldAnswer7: {fileID: 418142881}
+  InputFieldAnswer8: {fileID: 1574434289}
   errorpanel: {fileID: 1962935189}
 --- !u!1 &821827389
 GameObject:
