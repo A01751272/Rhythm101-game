@@ -17,9 +17,11 @@ public class DialogueI3 : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Time.timeScale = 1;
         //Vaciamos el texto e iniciamos a mostrar dialogo
         textComponent.text = string.Empty;
-        textSpeed = 0;
+        textSpeed = 0.04f;
+        index = 0;
         StartCoroutine(StartDialogue());
     }
 
@@ -45,11 +47,7 @@ public class DialogueI3 : MonoBehaviour
     {
         //Iniciamos a mostrar el dialogo
         yield return new WaitForSeconds(1);
-        Character2.SetActive(true);
-        index = 0;
         StartCoroutine(TypeLine());
-        yield return new WaitForSeconds(5);
-        ButtonSkip.SetActive(true);
     }
 
     IEnumerator TypeLine()
@@ -70,6 +68,10 @@ public class DialogueI3 : MonoBehaviour
         {
             index++;
             textComponent.text = string.Empty;
+            if(index == 1)
+            {
+                Character2.SetActive(true);
+            }
             if (index == 2)
             {
                 ButtonSkip.SetActive(true);
@@ -83,6 +85,7 @@ public class DialogueI3 : MonoBehaviour
         }
         else
         {
+            StopAllCoroutines();
             Character3.SetActive(false);
             gameObject.SetActive(false);
         }
