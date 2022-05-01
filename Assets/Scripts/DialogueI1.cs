@@ -17,9 +17,11 @@ public class DialogueI1 : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Time.timeScale = 1;
         //Vaciamos el texto e iniciamos a mostrar dialogo
         textComponent.text = string.Empty;
-        textSpeed = 0;
+        textSpeed = 0.04f;
+        index = 0;
         StartCoroutine(StartDialogue());
     }
 
@@ -45,7 +47,6 @@ public class DialogueI1 : MonoBehaviour
     {
         //Iniciamos a mostrar el dialogo
         yield return new WaitForSeconds(1);
-        index = 0;
         StartCoroutine(TypeLine());
     }
 
@@ -79,6 +80,7 @@ public class DialogueI1 : MonoBehaviour
         }
         else
         {
+            StopAllCoroutines();
             Character1.SetActive(false);
             gameObject.SetActive(false);
         }
