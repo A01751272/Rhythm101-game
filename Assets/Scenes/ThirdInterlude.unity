@@ -576,15 +576,15 @@ MonoBehaviour:
   - "Sheila E.: I do, and don\u2019t worry, you won\u2019t be alone, there\u2019s
     someone here who would love to play with you\u2026"
   - "????: Hello\u2026 I am..."
-  - 'You: Oh I know who you are, I know everything about you, you are Peter Edward
+  - 'You: Oh I know who you are, I know everything about you! You are Peter Edward
     Baker, better known as Ginger Baker, part of the group Cream, the one who introduced
-    showmanship to the rock world, the one who used African influences in your works.'
+    showmanship to the rock world, the one who used African influences in his works.'
   - "You: You\u2019re famous for using a double bass drum. And you were inducted
     into the Rock and Roll Hall of Fame in 1992. I can\u2019t believe it\u2019s really
     you!!!"
   - "Ginger Baker: Oh well, I am really honored, and I\u2019ve heard great things
-    about you, I can\u2019t wait to hear you play\u2026"
-  - "You: Well then what are we waiting for? Let\u2019s do this."
+    about you! I can\u2019t wait to hear you play!"
+  - "You: Well then, what are we waiting for? Let\u2019s do this!!"
   textSpeed: 0.04
   ButtonSkip: {fileID: 2024176395}
   Character2: {fileID: 20411112}

@@ -707,8 +707,7 @@ MonoBehaviour:
   lines:
   - "As you were walking home yesterday, you saw a poster about an upcoming drumming
     competition with a prize of a $100, 000 dollars and the once in a lifetime opportunity
-    to meet your favorite drummer, Ginger Baker, who you\u2019ve admired your whole
-    life. "
+    to meet Ginger Baker, who you\u2019ve admired your whole life. "
   - "There is just one problem\u2026"
   - "You have never played the drums before\u2026"
   - "You: I\u2019m lucky mom used to be in a band in high school and that her old
@@ -723,7 +722,7 @@ MonoBehaviour:
   - "Mitch Mitchell: However I\u2019m better known for playing in The Jimi Hendrix
     Experience, a group that was formed around Jimi Hendrix in the late 1960s, and
     for which I was inducted into the Rock and Roll Hall of Fame in 1992..."
-  - "Mitch Mitchell: If you want me to I\u2019d love to accompany you on your learning
+  - "Mitch Mitchell: If you want me to, I\u2019d love to accompany you on your learning
     journey."
   - 'You: Yes please! I really need some help.'
   - 'Mitch Mitchell: Well, then let''s start right away!'
