@@ -1,4 +1,4 @@
-# Rhythm101 - User' manual
+# Rhythm101 - User's manual
 ## Group 402 - CEM - Team 4
 This videogame was developed using Unity (Editor Version: 2021.2.11f1) on Windows.
 
