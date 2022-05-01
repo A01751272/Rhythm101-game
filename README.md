@@ -12,7 +12,7 @@ This videogame was developed using Unity (Editor Version: 2021.2.11f1) on Window
 7. Select which operating system it should be fabricated for (Windows, Mac, Linux, etc.)
 8. Select a folder in your local machine and press 'Build'
 9. Play Rhythm101 as an executable program!  
-_Note: In order to export the game in a determined OS, you will need to build it from a computer with the same operating system._
+_Note: In order to export a runnable version for MacOS, we had to build it from a device with the same Operating System. Therefore, we highly recommend that you have both Windows and MacOS devices ready to export a functional version of this videogame._
 
 ## Elements to consider
 * In order to play the videogame, a WiFi Connection is required in order to send and store players' data and progress.
