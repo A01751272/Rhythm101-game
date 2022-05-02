@@ -198,8 +198,6 @@ public class Navegacion : MonoBehaviour
     {
        
         SceneManager.LoadScene("LevelOne");
-     
-        
     }
     public void ToLevel2()
     {
