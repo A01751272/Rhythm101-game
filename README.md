@@ -3,7 +3,7 @@
 This videogame was developed using Unity (Editor Version: 2021.2.11f1) on Windows.
 
 ## Executable for Windows and Mac
-In order to play the final version of our videogame, download the respective folder containing all the files, depending on your operating system (currently supporting only MacOS and Windows) that are located inside the 'exe' folder in this repository, and run it as an executable program in your local machine.
+In order to play the final version of our videogame, download the respective folder containing all the files, depending on your operating system (currently supporting only MacOS and Windows) that are located inside the 'exe' folder in this repository, and run the corresponding executable program in your local machine.
 
 ## Edit or modify the videogame.
 1. Download Unity Hub (latest version) and Unity Editor (preferably Version: 2021.2.11f1). [Click here for instructions](https://unity3d.com/get-unity/download)
