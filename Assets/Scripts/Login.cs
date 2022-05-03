@@ -4,7 +4,14 @@ using UnityEngine;
 using TMPro;
 using UnityEngine.Networking;
 
-/* This script is responsible for the login of the player. Sending a GET HTTP request to the API and the database in order to verify 
+/* Authors:
+ * Aleny Sofía Arévalo Magdaleno
+ * Pablo González de la Parra
+ * Luis Humberto Romero Pérez
+ * Valeria Martínez Silva
+ * 
+ * Description:
+ * This script is responsible for the login of the player. Sending a GET HTTP request to the API and the database in order to verify 
  * the identity and the existence of a previously registered player
  */
 
@@ -40,16 +47,19 @@ public class Login : MonoBehaviour
         }
     }
 
+    //Struct that stores the highest level played by the user
     public struct RespuestaNivel
     {
         public string MaxLevel;
     }
 
+    //Function that starts coroutine
     public void ValidarDatosInicioSesion()
     {
         StartCoroutine(ValidateExistingPlayerShowId());
     }
 
+    //Function that validates an existing user and their correct password in order to allow access to videogame
     private IEnumerator ValidateExistingPlayerShowId()
     {
         if (InputFieldUsername.text == "" || InputFieldPassword.text == "")

@@ -5,7 +5,14 @@ using UnityEngine;
 using UnityEngine.Networking;
 using UnityEngine.SceneManagement;
 
-/* This script is responsible for the navegation between scenes. Each function is applied to every button, in order to acces the flow of the user
+/* Authors:
+ * Aleny Sofía Arévalo Magdaleno
+ * Pablo González de la Parra
+ * Luis Humberto Romero Pérez
+ * Valeria Martínez Silva
+ * 
+ * Description:
+ * This script is responsible for the navegation between scenes. Each function is applied to every button, in order to acces the flow of the user
  * throughout the videogame, validating certain requirements such as max level and highest score
  */
 
@@ -37,7 +44,6 @@ public class Navegacion : MonoBehaviour
     {
         Instance = this;
     }
-
 
     // Navigation functions to toggle scenes and/or panels
     // Toggle Scenes

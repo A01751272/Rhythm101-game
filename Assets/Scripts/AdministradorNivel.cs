@@ -3,7 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
-/* This scripts manages the level itself. It starts the background music, the begin and end canvas, the current score
+/* Authors:
+ * Aleny Sofía Arévalo Magdaleno
+ * Pablo González de la Parra
+ * Luis Humberto Romero Pérez
+ * Valeria Martínez Silva
+ * 
+ * Description:
+ * This scripts manages the level itself. It starts the background music, the begin and end canvas, the current score
  * of the player and updates the score information canvas automatically
  */
 
@@ -42,8 +49,10 @@ public class AdministradorNivel : MonoBehaviour
 
     void Update()
     {
+        //If level hasn't started the function doesn't execute
         if (!ComenzarNivel)
         {
+            //If key is pressed, begin level
             if (Input.anyKeyDown)
             {
                 empezarNivel();
@@ -52,6 +61,7 @@ public class AdministradorNivel : MonoBehaviour
         }
     }
 
+    //Function called when level just began
     public void empezarNivel()
     {
         ComenzarNivel = true;
@@ -60,11 +70,13 @@ public class AdministradorNivel : MonoBehaviour
         CanvasInfoNivel.SetActive(true);
     }
 
+    //Function called when level just terminated
     public void TerminarNivel()
     {
         HoraFinal = System.DateTime.Now.ToString("HH:mm:ss");
     }   
 
+    //Function called everytime a note is hit correctly
     public void NotaExitosa()
     {
         //Debug.Log("¡Nota exitosa!");
@@ -83,6 +95,7 @@ public class AdministradorNivel : MonoBehaviour
         TextoMultiplicadorActual.text = "Multiplier: x" + MultiplicadorActual;
     }
 
+    //Function called everytime a note wasn't hit on time
     public void NotaFallida()
     {
         //Debug.Log("¡Fallaste!");

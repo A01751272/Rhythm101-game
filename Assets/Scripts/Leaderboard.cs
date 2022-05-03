@@ -4,7 +4,14 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.Networking;
 
-/* This script is responsible for displaying the top score for the three levels from a specific user, utilizing GET HTTP requests
+/* Authors:
+ * Aleny Sofía Arévalo Magdaleno
+ * Pablo González de la Parra
+ * Luis Humberto Romero Pérez
+ * Valeria Martínez Silva
+ * 
+ * Description:
+ * This script is responsible for displaying the top score for the three levels from a specific user, utilizing GET HTTP requests
  * in order to access the information from the API and database
  */
 
@@ -22,6 +29,7 @@ public class Leaderboard : MonoBehaviour
         searchLeaderboard();
     }
 
+    //Function that starts the leaderboard coroutines
     public void searchLeaderboard()
     {
         StartCoroutine(showLeaderboard1());
@@ -31,11 +39,13 @@ public class Leaderboard : MonoBehaviour
 
     public LeaderboardData leadData;
 
+    //Struct that stores the store data from each level
     public struct LeaderboardData
     {
         public string score;
     }
 
+    //Function that sends a GET HTTP request in order to obtain the highest score from user on level 1
     private IEnumerator showLeaderboard1()
     {
         UnityWebRequest request = UnityWebRequest.Get("https://rhythm101-oxy65.ondigitalocean.app/attempts/" + idPlayer + "/1");
@@ -56,6 +66,7 @@ public class Leaderboard : MonoBehaviour
         }
     }
 
+    //Function that sends a GET HTTP request in order to obtain the highest score from user on level 1
     private IEnumerator showLeaderboard2()
     {
         UnityWebRequest request = UnityWebRequest.Get("https://rhythm101-oxy65.ondigitalocean.app/attempts/" + idPlayer + "/2");
@@ -76,6 +87,7 @@ public class Leaderboard : MonoBehaviour
         }
     }
 
+    //Function that sends a GET HTTP request in order to obtain the highest score from user on level 1
     private IEnumerator showLeaderboard3()
     {
         UnityWebRequest request = UnityWebRequest.Get("https://rhythm101-oxy65.ondigitalocean.app/attempts/" + idPlayer + "/3");

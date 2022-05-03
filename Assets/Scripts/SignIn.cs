@@ -4,7 +4,14 @@ using UnityEngine;
 using TMPro;
 using UnityEngine.Networking;
 
-/* This script is responsible for storing, validating and sending the information entered by the player in order to 
+/* Authors:
+ * Aleny Sofía Arévalo Magdaleno
+ * Pablo González de la Parra
+ * Luis Humberto Romero Pérez
+ * Valeria Martínez Silva
+ * 
+ * Description:
+ * This script is responsible for storing, validating and sending the information entered by the player in order to 
  * sign up to play the videogame, using a POST HTTP request in order to send the data directly to the API and into the database
  */
 
@@ -24,6 +31,8 @@ public class SignIn : MonoBehaviour
     public SignIn Instance;
 
     public GameObject errorpanel;
+
+    //Instance the class in order to be used in different classes
     void Awake()
     {
         Instance = this;
@@ -35,11 +44,14 @@ public class SignIn : MonoBehaviour
             errorpanel.SetActive(false);
         }
     }
+
+    //Function that starts the corrotuine of inserting a new player
     public void InsertarDatosRegistro()
     {
         StartCoroutine(InsertNewPlayer());
     }
 
+    //Corroutine that validates an existing player, and utilizes a POST HTTP request to send the information directly to the server
     private IEnumerator InsertNewPlayer()
     {
         if (InputFieldName.text == "" || 
@@ -118,11 +130,13 @@ public class SignIn : MonoBehaviour
         }
     }
 
+    //Function that starts the corrotuine of showing the id of the player
     public void showId()
     {
         StartCoroutine(SearchId());
     }
 
+    //Corroutine that returns the id of an existing player utilizing a HTTP GET request
     public IEnumerator SearchId()
     {
             string username = InputFieldUsername.text;

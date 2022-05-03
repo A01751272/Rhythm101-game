@@ -6,7 +6,14 @@ using System.Security.Cryptography;
 using System.Text.RegularExpressions;
 using UnityEngine.Networking;
 
-/* This script is responsible for starting, stoping and administrating the appearance of the circles, or notes
+/* Authors:
+ * Aleny Sofía Arévalo Magdaleno
+ * Pablo González de la Parra
+ * Luis Humberto Romero Pérez
+ * Valeria Martínez Silva
+ * 
+ * Description:
+ * This script is responsible for starting, stoping and administrating the appearance of the circles, or notes
  * throughout the level, as well as displaying the final score obtained
  */
 
@@ -14,6 +21,8 @@ public class MovimientoCirculos : MonoBehaviour
 {
 
     public float velocidadCirculos = 0;
+
+    //Circles sequence that should appear on screen
     public int[] VectorCirculos = { 0, 1, 2, 3, 0, 1, 3, 0, 1, 2, 1, 3, 0, 1, 3, 0, 2, 1, 2, 0, 3 };
 
     private bool IniciarCorrutina = false;
@@ -23,6 +32,7 @@ public class MovimientoCirculos : MonoBehaviour
 
     public static MovimientoCirculos Instance;
 
+    //Function called before the Start() function
     void Awake()
     {
         Instance = this;
@@ -39,6 +49,7 @@ public class MovimientoCirculos : MonoBehaviour
         CanvasFinalNivel.SetActive(false);
     }
 
+    //Function that displays the circles on screen, and calls the end function when it finishes
     public IEnumerator MostrarCirculos()
     {
         foreach (int i in VectorCirculos)
@@ -55,6 +66,7 @@ public class MovimientoCirculos : MonoBehaviour
         TerminarNivel();
     }
 
+    //Function that is called when level, or the circles are finished
     public void TerminarNivel()
     {
         CanvasFinalNivel.SetActive(true);
@@ -79,6 +91,7 @@ public class MovimientoCirculos : MonoBehaviour
         BotonPausa.SetActive(false);
     }
 
+    //Function in order to hash password (Not utilized)
     /*
     IEnumerator PostScores(string name, int score)
     {

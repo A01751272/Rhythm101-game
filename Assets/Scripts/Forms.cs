@@ -4,7 +4,14 @@ using UnityEngine;
 using TMPro;
 using UnityEngine.Networking;
 
-/* This scripts is responsible for storing and sending the initial and final form answers written by the player, creating a POST HTTP request
+/* Authors:
+ * Aleny Sofía Arévalo Magdaleno
+ * Pablo González de la Parra
+ * Luis Humberto Romero Pérez
+ * Valeria Martínez Silva
+ * 
+ * Description:
+ * This scripts is responsible for storing and sending the initial and final form answers written by the player, creating a POST HTTP request
  * connecting directly to the API to store the information in the database
  */
 
@@ -29,10 +36,12 @@ public class Forms : MonoBehaviour
 
     public GameObject errorpanel;
 
+    //Function called before the Start() function
     void Awake()
     {
         instancia = this;
     }
+
     public void Update()
     {
         if (Input.anyKey)
@@ -40,16 +49,20 @@ public class Forms : MonoBehaviour
             errorpanel.SetActive(false);
         }
     }
+    
+    //Function called in order to start the coroutine to send initial form information
     public void InsertarDatosFormInicial()
     {
         StartCoroutine(InsertFormInicial());
     }
 
+    //Function called in order to start the coroutine to send final form information
     public void InsertarDatosFormFinal()
     {
         StartCoroutine(InsertFormFinal());
     }
 
+    //Coroutine that sends the initial form information to server
     private IEnumerator InsertFormInicial()
     {
         if(InputFieldAnswer1.text == "" || InputFieldAnswer2.text == "" || InputFieldAnswer3.text == ""
@@ -97,6 +110,7 @@ public class Forms : MonoBehaviour
         }
     }
 
+    //Coroutine that sends the final form information to server
     private IEnumerator InsertFormFinal()
     {
         if (InputFieldAnswer1.text == "" || InputFieldAnswer2.text == "" || InputFieldAnswer3.text == ""
