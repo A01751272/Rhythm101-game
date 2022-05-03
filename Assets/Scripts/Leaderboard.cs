@@ -4,6 +4,10 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.Networking;
 
+/* This script is responsible for displaying the top score for the three levels from a specific user, utilizing GET HTTP requests
+ * in order to access the information from the API and database
+ */
+
 public class Leaderboard : MonoBehaviour
 {
     private string respuestaServidor;

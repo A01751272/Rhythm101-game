@@ -4,6 +4,10 @@ using UnityEngine;
 using TMPro;
 using UnityEngine.Networking;
 
+/* This script is responsible for storing, validating and sending the information entered by the player in order to 
+ * sign up to play the videogame, using a POST HTTP request in order to send the data directly to the API and into the database
+ */
+
 public class SignIn : MonoBehaviour
 {
     public TMP_InputField InputFieldName;

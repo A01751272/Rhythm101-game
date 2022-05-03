@@ -4,6 +4,10 @@ using UnityEngine;
 using TMPro;
 using UnityEngine.Networking;
 
+/* This script is responsible for the login of the player. Sending a GET HTTP request to the API and the database in order to verify 
+ * the identity and the existence of a previously registered player
+ */
+
 public class Login : MonoBehaviour
 {
     public TMP_InputField InputFieldUsername;

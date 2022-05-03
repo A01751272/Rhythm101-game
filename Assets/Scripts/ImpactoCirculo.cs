@@ -2,9 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-/* Este script se encarga de detectar y categorizar cuando cada circulo individual interactua con cada tambor,
- * ya sea en un golpe exitoso o cuando se falla la nota
-*/
+/* This script is responsible for detecting and categorizing when each individual circle, or note, interacts with
+ * a specific drum, wether it was a succesfull hit or a missed note
+ */
 
 public class ImpactoCirculo : MonoBehaviour
 {

@@ -6,9 +6,8 @@ using System.Security.Cryptography;
 using System.Text.RegularExpressions;
 using UnityEngine.Networking;
 
-/* Este script se encarga de comenzar y administar la aparición y movimiento 
- * de los círculos en la pantalla, al igual que accionar los métodos cuando
- * se termina el nivel
+/* This script is responsible for starting, stoping and administrating the appearance of the circles, or notes
+ * throughout the level, as well as displaying the final score obtained
  */
 
 public class MovimientoCirculos : MonoBehaviour

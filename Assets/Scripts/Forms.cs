@@ -4,6 +4,10 @@ using UnityEngine;
 using TMPro;
 using UnityEngine.Networking;
 
+/* This scripts is responsible for storing and sending the initial and final form answers written by the player, creating a POST HTTP request
+ * connecting directly to the API to store the information in the database
+ */
+
 public class Forms : MonoBehaviour
 {
     public TMP_InputField InputFieldAnswer1;

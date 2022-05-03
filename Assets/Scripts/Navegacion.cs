@@ -5,6 +5,10 @@ using UnityEngine;
 using UnityEngine.Networking;
 using UnityEngine.SceneManagement;
 
+/* This script is responsible for the navegation between scenes. Each function is applied to every button, in order to acces the flow of the user
+ * throughout the videogame, validating certain requirements such as max level and highest score
+ */
+
 public class Navegacion : MonoBehaviour
 {
     // Declaration of panels used to navigate

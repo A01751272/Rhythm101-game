@@ -4,6 +4,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+/* This script is responsible for "blocking" levels in the level menu scene if the player hasn's completed a previous required level
+ */
+
 public class LevelsMenu : MonoBehaviour
 {
     [SerializeField]

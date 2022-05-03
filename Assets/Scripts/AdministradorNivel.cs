@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
-/* Este script se encarga de administrar elementos generales del nivel, como la música de fondo, los canvas de inicio
- * y final, al igual que la actualización de los textos del puntaje y multiplicadores
-*/
+/* This scripts manages the level itself. It starts the background music, the begin and end canvas, the current score
+ * of the player and updates the score information canvas automatically
+ */
 
 public class AdministradorNivel : MonoBehaviour
 {

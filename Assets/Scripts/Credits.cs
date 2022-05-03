@@ -2,6 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/* This scripts displays the two canvas that compose the credits scene, changing them when a user inputs any key down
+ */
+
 public class Credits : MonoBehaviour
 {
     public GameObject CongratsPanel;

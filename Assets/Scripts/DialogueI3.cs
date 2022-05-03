@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.SceneManagement;
+
 //Clase para generar los cuadros de dialogo en el juego
 public class DialogueI3 : MonoBehaviour
 {
