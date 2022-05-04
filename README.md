@@ -3,7 +3,11 @@
 This videogame was developed using Unity (Editor Version: 2021.2.11f1) on Windows.
 
 ## Executable for Windows and Mac
-In order to play the final version of our videogame, download the respective folder containing all the files, depending on your operating system (currently supporting only MacOS and Windows) that are located inside the 'exe' folder in this repository, and run the corresponding executable program in your local machine.
+### Windows:
+In order to play the final version of our videogame on Windows, download the folder containing all the Windows source files that are located inside the 'exe' folder in this repository, and run the corresponding executable program in your local machine.
+### Mac:
+In order to play the final version of our videogame on Mac, download the whole folder (Rhythm101MacBuild) into a zip file on [this link](https://drive.google.com/drive/folders/197y9w9TSST1nSt88pipbA3EhqMkjpmCl?usp=sharing) from Google Drive into your local machine. Locate the zip file in your computer
+(Normally Apple opens a folder with the files, that doesn't execute the app correctly, and throws the necessary zip file in the trash bin). If this is the case, move the zip file into another location on your computer, decompress it manually, and run the .app executable directly.
 
 ## Edit or modify the videogame.
 1. Download Unity Hub (latest version) and Unity Editor (preferably Version: 2021.2.11f1). [Click here for instructions](https://unity3d.com/get-unity/download)
